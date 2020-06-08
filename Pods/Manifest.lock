@@ -1,0 +1,20 @@
+PODS:
+  - Cosmos (21.0.0)
+  - XCDYouTubeKit (2.14.0)
+
+DEPENDENCIES:
+  - Cosmos (~> 21.0)
+  - XCDYouTubeKit (~> 2.9)
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - XCDYouTubeKit
+
+SPEC CHECKSUMS:
+  Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
+  XCDYouTubeKit: 04a2f89dca6c5c53d1786701a0e98dcb484be7a8
+
+PODFILE CHECKSUM: 7298c897d77af0a08b9628933068f268e4a53abd
+
+COCOAPODS: 1.9.3

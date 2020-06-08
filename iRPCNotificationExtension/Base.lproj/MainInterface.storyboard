@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="iRPCNotificationExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ua8-Yi-XTM" userLabel="Player View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="aUk-Qm-XzP"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QjZ-W3-y09" userLabel="Outer Stack View">
+                                <rect key="frame" x="0.0" y="256" width="320" height="411"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UX2-T2-8oV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUk-mk-O7d" userLabel="Video Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPK-1a-HaJ" userLabel="Video Description Label">
+                                                <rect key="frame" x="0.0" y="24.5" width="320" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-ev-G5Y">
+                                        <rect key="frame" x="0.0" y="58.5" width="320" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-HF-qB0" userLabel="Subscribe Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
+                                                <state key="normal" title="Add"/>
+                                                <connections>
+                                                    <action selector="subscribeTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="5cu-oQ-qNh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65g-7E-bYX" userLabel="Favorite Button">
+                                                <rect key="frame" x="162" y="0.0" width="158" height="30"/>
+                                                <state key="normal" title="Favorite"/>
+                                                <connections>
+                                                    <action selector="favoriteTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="zwL-t4-pk4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zx-F9-sko" userLabel="Review Button">
+                                        <rect key="frame" x="0.0" y="104.5" width="320" height="37.5"/>
+                                        <state key="normal" title="Review"/>
+                                        <connections>
+                                            <action selector="reviewTapped" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="5RF-qe-fAS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your review has been submitted!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmi-RF-dvr" userLabel="Submit Label">
+                                        <rect key="frame" x="0.0" y="158" width="320" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-HP-pi8" userLabel="Review Stack View">
+                                        <rect key="frame" x="0.0" y="194.5" width="320" height="216.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3b-gY-z6J" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="a7M-JT-Hir"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B9w-t4-2qs">
+                                                <rect key="frame" x="0.0" y="74" width="320" height="78.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZi-Bw-g5J" userLabel="Comment Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6YU-yK-hHu" userLabel="Comment Text View">
+                                                        <rect key="frame" x="0.0" y="28.5" width="320" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iax-qC-YXa" userLabel="Submit Button">
+                                                <rect key="frame" x="0.0" y="176.5" width="320" height="40"/>
+                                                <color key="backgroundColor" red="0.1666114279810581" green="0.39395810065483916" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="pnt-pB-OgI"/>
+                                                </constraints>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="submitTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="qa7-DG-2l8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QjZ-W3-y09" firstAttribute="top" secondItem="ua8-Yi-XTM" secondAttribute="bottom" constant="16" id="DEc-TS-OsY"/>
+                            <constraint firstAttribute="bottom" secondItem="QjZ-W3-y09" secondAttribute="bottom" id="GrW-Yb-Gjg"/>
+                            <constraint firstItem="ua8-Yi-XTM" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="RVq-Xr-7Qk"/>
+                            <constraint firstItem="ua8-Yi-XTM" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="Uep-mm-qeH"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="QjZ-W3-y09" secondAttribute="trailing" id="bW9-Dc-M3T"/>
+                            <constraint firstItem="QjZ-W3-y09" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="dHw-Hc-Ylb"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="ua8-Yi-XTM" secondAttribute="trailing" id="tSz-TS-h9Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="667"/>
+                    <connections>
+                        <outlet property="favoriteButton" destination="65g-7E-bYX" id="BFM-Y0-O2w"/>
+                        <outlet property="playerView" destination="ua8-Yi-XTM" id="SB0-GF-ohb"/>
+                        <outlet property="reviewButton" destination="Iax-qC-YXa" id="8mx-85-YtA"/>
+                        <outlet property="reviewStackView" destination="MFv-HP-pi8" id="h30-JY-kym"/>
+                        <outlet property="submitLabel" destination="rmi-RF-dvr" id="0iC-AX-mwo"/>
+                        <outlet property="subscribeButton" destination="hPL-HF-qB0" id="BbS-ao-Uw6"/>
+                        <outlet property="videoDescriptionLabel" destination="aPK-1a-HaJ" id="Khz-2F-1M4"/>
+                        <outlet property="videoTitleLabel" destination="vUk-mk-O7d" id="GCE-H9-39A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="138"/>
+        </scene>
+    </scenes>
+</document>
